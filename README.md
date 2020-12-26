@@ -8,3 +8,4 @@
   * [투 포인터](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm/primeNumber.md#투-포인터)
     * [특정한 합을 가지는 부분 연속 수열 찾기]
     * [정렬되어 있는 두 리스트의 합집합]
+  * [구간 합 계산](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm/arraySum.md)
