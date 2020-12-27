@@ -1,4 +1,4 @@
-# 코드업 - 파이썬 기초
+# 코드업 1-20 python
 ## 1
 ```python
 print('Hello')
