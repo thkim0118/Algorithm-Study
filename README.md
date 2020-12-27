@@ -12,3 +12,10 @@
   * [순열과 조합](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm/permutation_combination.md)
     * [순열](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm/permutation_combination.md#순열)
     * [조합](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm/permutation_combination.md#조합)
+---
+* [codeUp]
+  * [1-20(python)](https://github.com/thkim0118/Algorithm-Study/blob/main/codeUp/1-20(python).md)
+  * [21-40(python)](https://github.com/thkim0118/Algorithm-Study/blob/main/codeUp/21-40(python).md)
+---
+* [algorithm-exam]
+  * [소수 구하기](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm-exam/getPrimeNumber.md)
