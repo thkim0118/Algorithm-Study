@@ -93,12 +93,14 @@ a = int(input(), 16)
 print('%o' % a)
 ```
 ## 36
+> ord -> 문자를 ASCII 코드로 변환한 정수 값으로 보여준다.
 ```python
 a = input()
 
 print(ord(a))
 ```
 ## 37
+> chr -> 정수 값에 맞는 ASCII 코드의 문자 값으로 변환한다.
 ```python
 a = int(input())
 
