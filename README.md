@@ -18,6 +18,7 @@
   * [21-40(python)](https://github.com/thkim0118/Algorithm-Study/blob/main/codeUp/21-40(python).md)
   * [41-60(python)](https://github.com/thkim0118/Algorithm-Study/blob/main/codeUp/41-60(python).md)
   * [61-80(python)](https://github.com/thkim0118/Algorithm-Study/blob/main/codeUp/61-80(python).md)
+  * [81-100(python)](https://github.com/thkim0118/Algorithm-Study/blob/main/codeUp/81-100(python).md)
 ---
 * [algorithm-exam]
   * [소수 구하기](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm-exam/getPrimeNumber.md)
