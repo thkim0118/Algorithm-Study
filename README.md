@@ -23,3 +23,6 @@
 * [algorithm-exam]
   * [소수 구하기](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm-exam/getPrimeNumber.md)
   * [암호 만들기](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm-exam/makePassword.md)
+---
+* [algorithm-list]
+  * [Greedy](https://github.com/thkim0118/Algorithm-Study/blob/main/algorithm-list/Greedy.md)
