@@ -1,7 +1,6 @@
 # Greedy Algorithm
 * Greedy : 탐욕스러운
 * Greedy Algorithm : 현재를 기준으로 당장 좋은 것만 고르는 방법으로 문제를 푸는 알고리즘
-  * 
   * **문제 풀이를 위한 최소한의 아이디어를 떠올리고 이것이 정당한지 검토할 수 있어야 답을 도출할 수 있다.**
 ---
 * 큰 수의 법칙
@@ -55,6 +54,28 @@ while True:
     break
   result += second
   m -= 1
+
+print(result)
+```
+* m 값이 매우 커진다면 시간 초과 가능성이 존재한다.
+* 반복되는 수열에 대해서 파악한 후 그에 대한 식을 세워 알고리즘을 작성한다.
+* 효율적인 풀이는 아래와 같다.
+```python
+n, m, k = map(int, input().split())
+
+data = list(map(int, input().split()))
+
+data.sort()
+first = data[n - 1]
+second = data[n - 2]
+
+# 가장 큰 수가 더해지는 횟수 계산
+count = int(m / (k + 1)) * k
+count += m % (k + 1)
+
+result = 0
+result += (count) * first # 가장 큰 수 더하기
+result += (m - count) * second # 두 번째로 큰 수 
 
 print(result)
 ```
