@@ -3,7 +3,7 @@
 * Greedy Algorithm : 현재를 기준으로 당장 좋은 것만 고르는 방법으로 문제를 푸는 알고리즘
   * **문제 풀이를 위한 최소한의 아이디어를 떠올리고 이것이 정당한지 검토할 수 있어야 답을 도출할 수 있다.**
 ---
-* 큰 수의 법칙
+## 큰 수의 법칙
 > 나의 풀이
 ```python
 n, m, k = map(int, input().split())
@@ -76,6 +76,36 @@ count += m % (k + 1)
 result = 0
 result += (count) * first # 가장 큰 수 더하기
 result += (m - count) * second # 두 번째로 큰 수 
+
+print(result)
+```
+
+## 숫자 카드 게임
+```python
+n, m = map(int, input().split())
+
+result = 0
+
+for i in range(n):
+  data = list(map(int, input().split()))
+  min_value = min(data)
+  
+  result = max(result, min_value)
+
+print(result)
+```
+```python
+n, m = map(int, input().split())
+
+result = 0
+
+for i in range(n):
+  data = list(map, input().split())
+
+  min_value = 10001
+  for a in data:
+    min_value = min(min_value, a)
+  result = max(result, min_value)
 
 print(result)
 ```
