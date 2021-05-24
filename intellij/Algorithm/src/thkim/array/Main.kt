@@ -1,5 +1,7 @@
 package thkim.array
 
 fun main() {
-    println("Hello World")
+    val containerWithMostWater = ContainerWithMostWater()
+
+    println(containerWithMostWater.maxArea(intArrayOf(4, 3, 2, 1, 4)))
 }
