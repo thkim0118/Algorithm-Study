@@ -7,6 +7,8 @@ fun main() {
     testSearchInsertPosition()
 
     testMaximumSubarray()
+
+    testCombinationSum()
 }
 
 fun testContainerWithMostWater() {
@@ -30,5 +32,13 @@ fun testMaximumSubarray() {
 
     println("53. Maximum Subarray")
     println(maximumSubarray.maxSubArray(intArrayOf(-2, 1, -3, 4, -1, 2, 1, -5, 4)))
+    println("--------------------------")
+}
+
+fun testCombinationSum() {
+    val combinationSum = CombinationSum()
+
+    println("39. Combination Sum")
+    println(combinationSum.combinationSum(intArrayOf(2, 3, 6, 7), 7))
     println("--------------------------")
 }
