@@ -3,6 +3,7 @@ package thkim.array
 import kotlin.math.abs
 
 class SearchInsertPosition {
+    // https://leetcode.com/problems/search-insert-position/
     fun searchInsert(nums: IntArray, target: Int): Int {
         // 정렬되어있는 집합 -> 이진 검색 사용 가능.
         var i = nums.binarySearch(target)
