@@ -2,8 +2,10 @@ package thkim.hash
 
 fun main() {
     println("--------------------------")
-    thkim.hash.testHashMapLevel1()
-    thkim.hash.testHashMapLevel2()
+//    testHashMapLevel1()
+//    testHashMapLevel2()
+
+    testHashMapLevel3Genres()
 }
 
 fun testHashMapLevel1() {
@@ -20,6 +22,22 @@ fun testHashMapLevel2() {
 
     println("2. Hash Level 1")
     println(lv2.solution___(arrayOf("119", "97674223", "1195524421")))
+//    println(lv2.solution__(arrayOf("119", "97674223", "1195524421")))
+//    println(lv2.solution__(arrayOf("1195524421", "119", "97674223")))
+//    println(lv2.solution(arrayOf("123", "456", "789")))
+    println("--------------------------")
+}
+
+fun testHashMapLevel3Genres() {
+    val lv3 = HashLevel3Genres()
+
+    println("3. Hash Level 2 Genres")
+    lv3.solution(
+        arrayOf("classic", "pop", "classic", "classic", "pop"),
+        intArrayOf(500, 600, 150, 800, 2500)
+    ).forEach {
+        println(it)
+    }
 //    println(lv2.solution__(arrayOf("119", "97674223", "1195524421")))
 //    println(lv2.solution__(arrayOf("1195524421", "119", "97674223")))
 //    println(lv2.solution(arrayOf("123", "456", "789")))
