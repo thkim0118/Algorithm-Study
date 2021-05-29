@@ -35,9 +35,7 @@ fun testHashMapLevel3Genres() {
     lv3.solution(
         arrayOf("classic", "pop", "classic", "classic", "pop"),
         intArrayOf(500, 600, 150, 800, 2500)
-    ).forEach {
-        println(it)
-    }
+    )
 //    println(lv2.solution__(arrayOf("119", "97674223", "1195524421")))
 //    println(lv2.solution__(arrayOf("1195524421", "119", "97674223")))
 //    println(lv2.solution(arrayOf("123", "456", "789")))
