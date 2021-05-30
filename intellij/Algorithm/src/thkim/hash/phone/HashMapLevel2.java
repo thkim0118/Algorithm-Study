@@ -1,4 +1,4 @@
-package thkim.hash;
+package thkim.hash.phone;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package thkim.hash
+package thkim.hash.clothes
 
 import java.util.HashMap
 
