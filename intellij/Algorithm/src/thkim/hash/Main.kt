@@ -4,6 +4,7 @@ import thkim.hash.album.HashLevel3Genres
 import thkim.hash.marathon.HashMapLevel1
 import thkim.hash.marathon.HashLevel1MarathonKt
 import thkim.hash.phone.HashMapLevel2
+import thkim.hash.phone.HashPhoneKt
 
 fun main() {
     println("--------------------------")
@@ -12,7 +13,9 @@ fun main() {
 
 //    testHashMapLevel3Genres()
 
-    testHashMarathonKt()
+//    testHashMarathonKt()
+
+    testHashPhoneKt()
 }
 
 fun testHashMapLevel1() {
@@ -41,6 +44,16 @@ fun testHashMapLevel2() {
 //    println(lv2.solution__(arrayOf("119", "97674223", "1195524421")))
 //    println(lv2.solution__(arrayOf("1195524421", "119", "97674223")))
 //    println(lv2.solution(arrayOf("123", "456", "789")))
+    println("--------------------------")
+}
+
+fun testHashPhoneKt() {
+    val lv2 = HashPhoneKt()
+
+    println("2. Hash Level 2 kotlin")
+    println(lv2.solution(arrayOf("119", "97674223", "1195524421"))) // false
+    println(lv2.solution(arrayOf("1235", "1234", "567"))) // true
+    println(lv2.solution(arrayOf("123", "456", "789"))) // true
     println("--------------------------")
 }
 
