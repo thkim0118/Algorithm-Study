@@ -1,4 +1,4 @@
-package thkim.hash
+package thkim.hash.album
 
 class HashLevel3Genres {
 

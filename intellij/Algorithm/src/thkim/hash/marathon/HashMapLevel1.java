@@ -1,4 +1,4 @@
-package thkim.hash;
+package thkim.hash.marathon;
 
 import java.util.HashMap;
 
