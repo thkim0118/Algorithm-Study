@@ -1,8 +1,9 @@
 package thkim.hash
 
 import thkim.hash.album.HashLevel3Genres
-import thkim.hash.marathon.HashMapLevel1
+import thkim.hash.clothes.HashLevel2Clothes2
 import thkim.hash.marathon.HashLevel1MarathonKt
+import thkim.hash.marathon.HashMapLevel1
 import thkim.hash.phone.HashMapLevel2
 import thkim.hash.phone.HashPhoneKt
 
@@ -15,7 +16,9 @@ fun main() {
 
 //    testHashMarathonKt()
 
-    testHashPhoneKt()
+//    testHashPhoneKt()
+
+    testHashClothes2()
 }
 
 fun testHashMapLevel1() {
@@ -54,6 +57,22 @@ fun testHashPhoneKt() {
     println(lv2.solution(arrayOf("119", "97674223", "1195524421"))) // false
     println(lv2.solution(arrayOf("1235", "1234", "567"))) // true
     println(lv2.solution(arrayOf("123", "456", "789"))) // true
+    println("--------------------------")
+}
+
+fun testHashClothes2() {
+    val clothes2 = HashLevel2Clothes2()
+
+    println("2. Hash Clothes")
+    println(
+        clothes2.solution(
+            arrayOf(
+                arrayOf("yellowhat", "headgear"),
+                arrayOf("bluesunglasses", "eyewear"),
+                arrayOf("green_turban", "headgear")
+            )
+        )
+    )
     println("--------------------------")
 }
 
