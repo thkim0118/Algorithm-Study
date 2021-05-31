@@ -1,5 +1,7 @@
 package thkim.stack
 
+import thkim.stack.great.MakeTheStringGreat
+
 fun main() {
     testMakeTheStringGreat()
 }
