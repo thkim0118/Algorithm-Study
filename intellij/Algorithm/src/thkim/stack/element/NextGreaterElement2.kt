@@ -14,6 +14,20 @@ class NextGreaterElement2 {
         return nums
     }
 
+    fun nextGreaterElements2(nums: IntArray): IntArray {
+        val res = IntArray(nums.size)
+        for (i in nums.indices) {
+            res[i] = -1
+            for (j in 1 until nums.size) {
+                if (nums[(i + j) % nums.size] > nums[i]) {
+                    res[i] = nums[(i + j) % nums.size]
+                    break
+                }
+            }
+        }
+        return res
+    }
+
     fun nextGreaterElements1(nums: IntArray): IntArray {
         val res = IntArray(nums.size)
         val doublenums = IntArray(nums.size * 2)

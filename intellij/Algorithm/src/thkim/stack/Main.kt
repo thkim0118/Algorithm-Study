@@ -35,6 +35,7 @@ fun testNextGreaterElement2() {
 
     println("Make The String Great")
     println(element2.nextGreaterElements1(intArrayOf(5, 1, 2, 0, 4))) // true
+    println(element2.nextGreaterElements2(intArrayOf(5, 1, 2, 0, 4))) // true
     println("--------------------------")
 
 }
