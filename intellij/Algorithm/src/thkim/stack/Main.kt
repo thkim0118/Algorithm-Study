@@ -2,12 +2,22 @@ package thkim.stack
 
 import thkim.stack.element.NextGreaterElement2
 import thkim.stack.great.MakeTheStringGreat
+import thkim.stack.node.NextGreaterNodeInLinkedList
 import thkim.stack.parenthesis.ValidParentheses
 
 fun main() {
 //    testMakeTheStringGreat()
 //    testValidParentheses()
-    testNextGreaterElement()
+//    testNextGreaterElement()
+    testNextGreaterNode()
+}
+
+fun testNextGreaterNode() {
+    val nodeNode = NextGreaterNodeInLinkedList()
+
+    println("Next Greater Node")
+    println(nodeNode.nextLargerNodes(NextGreaterNodeInLinkedList.ListNode(5)))
+    println("--------------------------")
 }
 
 fun testMakeTheStringGreat() {
