@@ -7,7 +7,7 @@ import thkim.stack.parenthesis.ValidParentheses
 fun main() {
 //    testMakeTheStringGreat()
 //    testValidParentheses()
-    testNextGreaterElement2()
+    testNextGreaterElement()
 }
 
 fun testMakeTheStringGreat() {
@@ -30,12 +30,11 @@ fun testValidParentheses() {
     println("--------------------------")
 }
 
-fun testNextGreaterElement2() {
+fun testNextGreaterElement() {
     val element2 = NextGreaterElement2()
 
-    println("Make The String Great")
-    println(element2.nextGreaterElements1(intArrayOf(5, 1, 2, 0, 4))) // true
-    println(element2.nextGreaterElements2(intArrayOf(5, 1, 2, 0, 4))) // true
+    println("Next Greater Element")
+    println(element2.nextGreaterElements(intArrayOf(1, 2, 3, 4, 3)))
+    println(element2.nextGreaterElements(intArrayOf(5, 1, 2, 0, 4)))
     println("--------------------------")
-
 }
