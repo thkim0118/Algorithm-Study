@@ -10,3 +10,11 @@
     - 프로그래머스(https://programmers.co.kr/learn/courses/30/lessons/42578)
   - [베스트앨범](https://programmers.co.kr/learn/courses/30/lessons/42579)
     - 프로그래머스(https://programmers.co.kr/learn/courses/30/lessons/42579)
+
+### Stack
+  - leet code 문제 풀이
+    - https://leetcode.com/problems/make-the-string-great/
+    - https://leetcode.com/problems/valid-parentheses/
+    - https://leetcode.com/problems/next-greater-element-ii/
+    - https://leetcode.com/problems/next-greater-node-in-linked-list/
+  
