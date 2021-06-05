@@ -13,8 +13,12 @@
 
 ### Stack
   - leet code 문제 풀이
-    - https://leetcode.com/problems/make-the-string-great/
-    - https://leetcode.com/problems/valid-parentheses/
-    - https://leetcode.com/problems/next-greater-element-ii/
-    - https://leetcode.com/problems/next-greater-node-in-linked-list/
+    - [Make The String Great](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/out/production/Algorithm/thkim/stack/great/MakeTheStringGreat.class)
+      - [Leet Code - Make the string great](https://leetcode.com/problems/make-the-string-great/)
+    - [Valid Parentheses](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/out/production/Algorithm/thkim/stack/parenthesis/ValidParentheses.class)
+      - [Leet Code - Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+    - [Next Greater Element 2](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/out/production/Algorithm/thkim/stack/element/NextGreaterElement2.class)
+      - [Leet Code - Next Greater Element 2](https://leetcode.com/problems/next-greater-element-ii/)
+    - [Next Greater Node In Linked List](https://github.com/thkim0118/Algorithm-Study/tree/main/intellij/Algorithm/out/production/Algorithm/thkim/stack/node)
+      - [Leet Code - Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)
   
