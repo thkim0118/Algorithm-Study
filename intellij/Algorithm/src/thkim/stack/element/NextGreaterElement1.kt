@@ -1,4 +1,4 @@
 package thkim.stack.element
 
-class NextGreaterElement2 {
+class NextGreaterElement1 {
 }

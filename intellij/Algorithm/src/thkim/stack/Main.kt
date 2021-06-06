@@ -5,6 +5,7 @@ import thkim.stack.great.MakeTheStringGreat
 import thkim.stack.great.MakeTheStringGreat2
 import thkim.stack.node.NextGreaterNodeInLinkedList
 import thkim.stack.parenthesis.ValidParentheses
+import thkim.stack.parenthesis.ValidParentheses2
 
 fun main() {
 //    testMakeTheStringGreat()
@@ -12,7 +13,8 @@ fun main() {
 //    testNextGreaterElement()
 //    testNextGreaterNode()
 
-    testMakeTheStringGreat2()
+//    testMakeTheStringGreat2()
+    testValidParentheses2()
 }
 
 fun testMakeTheStringGreat2() {
@@ -49,6 +51,17 @@ fun testValidParentheses() {
     println(parentheses.isValid("([)]")) // false
     println(parentheses.isValid("{[]}")) // true
     println(parentheses.isValid("({[)")) // false
+    println("--------------------------")
+}
+
+fun testValidParentheses2() {
+    val parentheses = ValidParentheses2()
+
+    println("Make The String Great2")
+    println(parentheses.isValid("()[]{}")) // true
+//    println(parentheses.isValid("([)]")) // false
+//    println(parentheses.isValid("{[]}")) // true
+//    println(parentheses.isValid("({[)")) // false
     println("--------------------------")
 }
 
