@@ -21,3 +21,15 @@
     - [Next Greater Node In Linked List](https://github.com/thkim0118/Algorithm-Study/tree/main/intellij/Algorithm/out/production/Algorithm/thkim/stack/node)
       - [Leet Code - Next Greater Node In Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/)
   
+## Queue(21.06.13)
+  - leet code + hacker rank 문제 풀이
+    - [Task Scheduler]()
+      - [Leet Code - Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+    - [Design Circular Queue]()
+      - [Leet Code - Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
+    - [Binary Tree Right Side View]()
+      - [Leet Code - Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+    - [Castle on the Grid]()
+      - [Hacker Rank - Castle on the Grid](https://www.hackerrank.com/challenges/castle-on-the-grid/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=stacks-queues)
+    - [Largest Rectangle]()
+      - [Hacker Rank - Largest Rectangle](https://www.hackerrank.com/challenges/largest-rectangle/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=stacks-queues)
