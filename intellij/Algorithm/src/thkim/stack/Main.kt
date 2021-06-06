@@ -2,6 +2,7 @@ package thkim.stack
 
 import thkim.stack.element.NextGreaterElement2
 import thkim.stack.great.MakeTheStringGreat
+import thkim.stack.great.MakeTheStringGreat2
 import thkim.stack.node.NextGreaterNodeInLinkedList
 import thkim.stack.parenthesis.ValidParentheses
 
@@ -9,7 +10,18 @@ fun main() {
 //    testMakeTheStringGreat()
 //    testValidParentheses()
 //    testNextGreaterElement()
-    testNextGreaterNode()
+//    testNextGreaterNode()
+
+    testMakeTheStringGreat2()
+}
+
+fun testMakeTheStringGreat2() {
+    val stringGreat = MakeTheStringGreat2()
+
+    println("Make The String Great")
+    println(stringGreat.makeGood("leEeetcode"))
+    println(stringGreat.makeGood("abBAcC"))
+    println("--------------------------")
 }
 
 fun testNextGreaterNode() {
