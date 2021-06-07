@@ -1,5 +1,6 @@
 package thkim.stack
 
+import thkim.stack.element.NextGreaterElement
 import thkim.stack.element.NextGreaterElement2
 import thkim.stack.great.MakeTheStringGreat
 import thkim.stack.great.MakeTheStringGreat2
@@ -14,7 +15,8 @@ fun main() {
 //    testNextGreaterNode()
 
 //    testMakeTheStringGreat2()
-    testValidParentheses2()
+//    testValidParentheses2()
+    testNExtGreaterElement2()
 }
 
 fun testMakeTheStringGreat2() {
@@ -66,10 +68,19 @@ fun testValidParentheses2() {
 }
 
 fun testNextGreaterElement() {
-    val element2 = NextGreaterElement2()
+    val element2 = NextGreaterElement()
 
     println("Next Greater Element")
     println(element2.nextGreaterElements(intArrayOf(1, 2, 3, 4, 3)))
     println(element2.nextGreaterElements(intArrayOf(5, 1, 2, 0, 4)))
+    println("--------------------------")
+}
+
+fun testNExtGreaterElement2() {
+    val element2 = NextGreaterElement2()
+
+    println("Next Greater Element")
+    println(element2.nextGreaterElements(intArrayOf(1, 2, 3, 4, 3)))
+//    println(element2.nextGreaterElements(intArrayOf(5, 1, 2, 0, 4)))
     println("--------------------------")
 }

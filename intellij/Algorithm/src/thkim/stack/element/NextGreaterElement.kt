@@ -3,7 +3,7 @@ package thkim.stack.element
 import java.util.*
 
 
-class NextGreaterElement2 {
+class NextGreaterElement {
 
     /*
      * input :  [1, 2, 1],  [1, 2, 3, 4, 3],    [1, 2, 3, 4, 3, 6, 0, 5],   [1,2,3,6,0,5,1,0,1,7]
