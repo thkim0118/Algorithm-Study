@@ -2,7 +2,24 @@ package thkim.queue.leetcode.task
 
 import java.util.*
 
+
 class TaskScheduler {
+
+    fun leastInterval2(tasks: CharArray, n: Int): Int {
+        val freq = IntArray(26)
+        var max_eq_count = 0
+        var max = 0
+        for (c in tasks) {
+            val task = c - 'A'
+            freq[task]++
+            if (max < freq[task]) {
+                max = freq[task]
+                max_eq_count = 1
+            } else if (max == freq[task]) max_eq_count++
+        }
+
+        return Math.max(max + (max - 1) * n + max_eq_count - 1, tasks.size)
+    }
 
     fun leastInterval(tasks: CharArray, n: Int): Int {
         val queue = PriorityQueue<Int>(Collections.reverseOrder())
