@@ -1,9 +1,11 @@
 package thkim.queue
 
+import thkim.queue.leetcode.task.TaskScheduler
 import thkim.queue.programmers.func.FunctionsDevelopment
 
 fun main() {
-    testFunctions()
+//    testFunctions()
+    testTaskScheduler()
 }
 
 @OptIn(ExperimentalStdlibApi::class)
@@ -22,4 +24,12 @@ fun testFunctions() {
     println("5.")
     func.solution(intArrayOf(99, 99, 99, 99, 99), intArrayOf(3, 3, 3, 3, 3))
     println("--------------------------")
+}
+
+fun testTaskScheduler() {
+    val task = TaskScheduler()
+
+    println("Task Scheduler")
+//    task.leastInterval(charArrayOf('A', 'A', 'A', 'B', 'B', 'B'), 2)
+    task.leastInterval(charArrayOf('A', 'A', 'A', 'A', 'A', 'A', 'B', 'C', 'D', 'E', 'F', 'G'), 2)
 }
