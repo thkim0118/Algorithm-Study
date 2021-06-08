@@ -5,7 +5,7 @@ import java.util.*
 class TaskScheduler {
 
     fun leastInterval(tasks: CharArray, n: Int): Int {
-        val queue = PriorityQueue<Int> { a, b -> b - a }
+        val queue = PriorityQueue<Int>(Collections.reverseOrder())
 
         val countMap = tasks.asSequence().groupingBy { it }.eachCount()
         queue.addAll(countMap.values)
