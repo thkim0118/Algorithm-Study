@@ -65,17 +65,18 @@ class MyCircularQueue(k: Int) {
 
     private val buffer: Array<Int?> = arrayOfNulls(k)
 
-    private var frontPos = 0
-    private var rearPos = 0
+    private var frontPos = 0 // 현재 값을 가리키고 있음
+    private var rearPos = 0 // 다음 값을 가리키고 있음
+    private var len = 0
 
     fun enQueue(value: Int): Boolean {
-        if (buffer[rearPos] != null) {
-            return false
-        }
+        if (buffer[rearPos] != null) return false
 
         buffer[rearPos] = value
 
         rearPos = (rearPos + 1) % buffer.size
+
+        len++
 
         return true
     }
@@ -87,24 +88,18 @@ class MyCircularQueue(k: Int) {
 
         frontPos = (frontPos + 1) % buffer.size
 
+        len--
+
         return true
     }
 
-    fun Front(): Int {
-        return buffer[frontPos] ?: -1
-    }
+    fun Front(): Int = buffer[frontPos] ?: -1
 
-    fun Rear(): Int {
-        return buffer[curRearPos()] ?: -1
-    }
+    fun Rear(): Int = buffer[curRearPos()] ?: -1
 
-    fun isEmpty(): Boolean {
-        return buffer[frontPos] == null && buffer[curRearPos()] == null
-    }
+    fun isEmpty(): Boolean = len == 0
 
-    fun isFull(): Boolean {
-        return (abs(frontPos - rearPos) == 1 && buffer[rearPos] != null) || (frontPos == rearPos && buffer[rearPos] != null)
-    }
+    fun isFull(): Boolean = len == buffer.size
 
     fun curRearPos(): Int = if (rearPos - 1 < 0) buffer.size - 1 else rearPos - 1
 }
