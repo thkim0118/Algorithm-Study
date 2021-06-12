@@ -1,7 +1,5 @@
 package thkim.queue.hackerrank
 
-import kotlin.reflect.jvm.internal.impl.builtins.StandardNames.FqNames.array
-
 
 /*
  * Complete the 'minimumMoves' function below.
@@ -14,22 +12,27 @@ import kotlin.reflect.jvm.internal.impl.builtins.StandardNames.FqNames.array
  *  4. INTEGER goalX
  *  5. INTEGER goalY
  */
-
-
-
 fun minimumMoves(grid: Array<String>, startX: Int, startY: Int, goalX: Int, goalY: Int): Int {
-    // Write your code here
-    var count = 0
-
     val queue = ArrayDeque<Pair<Int, Int>>()
     queue.addFirst(startX to startY)
 
     fun bfs(q: ArrayDeque<Pair<Int, Int>>): Int {
-        val distance: MutableList<IntArray> = mutableListOf()
+        val distance = mutableListOf<IntArray>()
 
+        // 빈 데이터 삽입.
+        grid.forEachIndexed { idx1, s ->
+            val list = mutableListOf<Int>()
+
+            for (i in s) {
+                list.add(0)
+            }
+
+            distance.add(idx1, list.toIntArray())
+        }
+
+        // 비교를 위한 초기값 설정.
         for (i in grid.indices) {
-            val temp = grid[i].trim().toCharArray()
-            for (j in temp.indices) {
+            for (j in grid[i].indices) {
                 distance[i][j] = Int.MAX_VALUE
             }
         }
@@ -38,50 +41,51 @@ fun minimumMoves(grid: Array<String>, startX: Int, startY: Int, goalX: Int, goal
 
         while (q.isNotEmpty()) {
             val de = q.removeLast()
-            val i: Int = de.first
-            val j: Int = de.second
-            val curD: Int = distance[i][j] + 1
+            val curX: Int = de.first
+            val curY: Int = de.second
+            val curD: Int = distance[curX][curY] + 1
 
-            //Cell s = pos.poll();
-            //int si = s.i;
-            //int sj = s.j;
-            for (k in i + 1 until grid.size) {
-                if (grid[k][j] == 'X') {
+            // Down
+            for (X in curX + 1 until grid.size) {
+                if (grid[X][curY] == 'X') {
                     break
                 }
-                if (distance[k][j] > curD) {
-                    distance[k][j] = curD
-                    q.addFirst(k to j)
+                if (distance[X][curY] > curD) {
+                    distance[X][curY] = curD
+                    q.addFirst(X to curY)
                 }
             }
 
-            for (k in i - 1 downTo 0) {
-                if (grid[k][j] == 'X') {
+            // Up
+            for (X in curX - 1 downTo 0) {
+                if (grid[X][curY] == 'X') {
                     break
                 }
-                if (distance[k][j] > curD) {
-                    distance[k][j] = curD
-                    q.addFirst(k to j)
+                if (distance[X][curY] > curD) {
+                    distance[X][curY] = curD
+                    q.addFirst(X to curY)
                 }
             }
 
-            for (k in j + 1 until grid[0].length) {
-                if (grid[i][k] == 'X') {
+            // Right
+            for (Y in curY + 1 until grid[0].length) {
+                if (grid[curX][Y] == 'X') {
                     break
                 }
-                if (distance[i][k] > curD) {
-                    distance[i][k] = curD
-                    q.addFirst(i to k)
+                if (distance[curX][Y] > curD) {
+                    distance[curX][Y] = curD
+                    q.addFirst(curX to Y)
                 }
             }
 
-            for (k in j - 1 downTo 0) {
-                if (grid[i][k] == 'X') {
+            // Left
+            for (Y in curY - 1 downTo 0) {
+                if (grid[curX][Y] == 'X') {
                     break
                 }
-                if (distance[i][k] > curD) {
-                    distance[i][k] = curD
-                    q.addFirst(i to k)
+                if (distance[curX][Y] > curD) {
+                    distance[curX][Y] = curD
+                    q.addFirst(curX to Y)
                 }
             }
         }
@@ -90,22 +94,4 @@ fun minimumMoves(grid: Array<String>, startX: Int, startY: Int, goalX: Int, goal
     }
 
     return bfs(queue)
-}
-
-fun main(args: Array<String>) {
-//    val n = readLine()!!.trim().toInt()
-
-//    val grid = Array<String>(n, { "" })
-//    for (i in 0 until n) {
-//        val gridItem = readLine()!!
-//        grid[i] = gridItem
-//    }
-    val grid = Array<String>(3, { "" })
-    grid[0] = ".X."
-    grid[1] = ".X."
-    grid[2] = "..."
-
-    val result = minimumMoves(grid, 0, 0, 0, 2)
-
-    println(result)
 }
