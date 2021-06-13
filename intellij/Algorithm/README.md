@@ -23,13 +23,13 @@
   
 ## Queue(21.06.13)
   - leet code + hacker rank 문제 풀이
-    - [Task Scheduler]()
+    - [Task Scheduler](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/src/thkim/queue/leetcode/task/TaskScheduler.kt)
       - [Leet Code - Task Scheduler](https://leetcode.com/problems/task-scheduler/)
-    - [Design Circular Queue]()
+    - [Design Circular Queue](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/src/thkim/queue/leetcode/design/DesignCircularQueue.kt)
       - [Leet Code - Design Circular Queue](https://leetcode.com/problems/design-circular-queue/)
-    - [Binary Tree Right Side View]()
+    - [Binary Tree Right Side View](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/src/thkim/queue/leetcode/tree/BinaryTreeRightSideView.kt)
       - [Leet Code - Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
-    - [Castle on the Grid]()
+    - [Castle on the Grid](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/src/thkim/queue/hackerrank/CastleOnTheGrid.kt)
       - [Hacker Rank - Castle on the Grid](https://www.hackerrank.com/challenges/castle-on-the-grid/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=stacks-queues)
-    - [Largest Rectangle]()
+    - [Largest Rectangle](https://github.com/thkim0118/Algorithm-Study/blob/main/intellij/Algorithm/src/thkim/queue/hackerrank/LargestRectangle.kt)
       - [Hacker Rank - Largest Rectangle](https://www.hackerrank.com/challenges/largest-rectangle/problem?h_l=interview&playlist_slugs%5B%5D%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D%5B%5D=stacks-queues)
