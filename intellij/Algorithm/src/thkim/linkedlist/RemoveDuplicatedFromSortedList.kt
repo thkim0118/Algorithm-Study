@@ -4,6 +4,7 @@ fun main() {
 
 }
 
+// recursion solution
 fun deleteDuplicates(head: ListNode?): ListNode? {
     if (head == null) {
         return head
@@ -33,6 +34,7 @@ fun deleteDuplicates(head: ListNode?): ListNode? {
     return answer
 }
 
+// while solution
 fun deleteDuplicates2(head: ListNode?): ListNode {
     var node = head
 
