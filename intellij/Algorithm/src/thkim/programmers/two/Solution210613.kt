@@ -8,6 +8,7 @@ fun main() {
 
 class Solution {
 
+    // https://programmers.co.kr/learn/courses/30/lessons/60058
     fun solution(p: String): String {
         // 1. 입력이 빈 문자열인 경우, 빈 문자열을 반환합니다.
         if (p == "") return ""
