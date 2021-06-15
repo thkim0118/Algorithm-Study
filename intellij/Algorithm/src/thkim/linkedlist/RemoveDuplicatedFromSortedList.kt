@@ -5,7 +5,7 @@ fun main() {
 }
 
 // recursion solution
-fun deleteDuplicates(head: ListNode?): ListNode? {
+fun _deleteDuplicates(head: ListNode?): ListNode? {
     if (head == null) {
         return head
     }
@@ -35,18 +35,20 @@ fun deleteDuplicates(head: ListNode?): ListNode? {
 }
 
 // while solution
-fun deleteDuplicates2(head: ListNode?): ListNode {
+fun _deleteDuplicates2(head: ListNode?): ListNode? {
+    if (head == null) return head
+
     var node = head
 
     while (node!!.next != null) {
         if (node.`val` == node.next!!.`val`) {
             node.next = node.next!!.next
         } else {
-            node = node.next
+            node = node.next!!
         }
     }
 
-    return head!!
+    return head
 }
 
 class ListNode(var `val`: Int) {
