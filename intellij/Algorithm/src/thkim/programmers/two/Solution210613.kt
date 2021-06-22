@@ -1,7 +1,5 @@
 package thkim.programmers.two
 
-import kotlin.collections.ArrayDeque
-
 fun main() {
 
 }
