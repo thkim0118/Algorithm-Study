@@ -1,4 +1,4 @@
-package thkim.backtracking
+package thkim.bruteforce
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
