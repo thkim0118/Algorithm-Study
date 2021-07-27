@@ -3,24 +3,27 @@ package thkim.bruteforce
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-fun main(args: Array<String>) = with(BufferedReader(InputStreamReader(System.`in`))) {
+fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val (N, M) = readLine().split(" ").map { it.toInt() }
 
-    val arr = arrayListOf<Int>()
+    val arr = IntArray(M)
+    val visited = BooleanArray(N)
 
-    readLine().split(" ").forEach { arr.add(it.toInt()) }
+    fun permutation(pivot: Int) {
+        if (pivot == M) {
+            arr.forEach { print("$it ") }
+            println()
+            return
+        }
 
-    fun permutation(nums: List<Int>, index: Int = 0, depth: Int = nums.size, combination: IntArray) {
-        if (index == nums.size) {
-            if (depth == 0) {
-                combination.forEach { print("$it ") }
-                println()
-            }
-        } else {
-            permutation(nums, index + 1, depth - 1, combination + nums[index])
-            permutation(nums, index + 1, depth, combination)
+        for (i in 1..N) {
+            if (visited[i - 1]) continue
+            visited[i - 1] = true
+            arr[pivot] = i
+            permutation(pivot + 1)
+            visited[i - 1] = false
         }
     }
 
-    permutation(arr.sorted(), depth = M, combination = intArrayOf())
+    permutation(0)
 }
