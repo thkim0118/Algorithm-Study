@@ -5,25 +5,20 @@ import java.io.InputStreamReader
 
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val (N, M) = readLine().split(" ").map { it.toInt() }
-
     val arr = IntArray(M)
-    val visited = BooleanArray(N)
 
-    fun permutation(pivot: Int = 0) {
-        if (pivot == M) {
+    fun recursion(pivot: Int = 1, depth: Int = 0) {
+        if (depth == M) {
             arr.forEach { print("$it ") }
             println()
             return
         }
 
-        for (i in 1..N) {
-            if (visited[i - 1]) continue
-            visited[i - 1] = true
-            arr[pivot] = i
-            permutation(pivot + 1)
-            visited[i - 1] = false
+        for (i in pivot..N) {
+            arr[depth] = i
+            recursion(i + 1, depth + 1)
         }
     }
 
-    permutation()
+    recursion()
 }
