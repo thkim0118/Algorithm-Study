@@ -8,85 +8,42 @@ import kotlin.math.min
 fun main() = with(BufferedReader(InputStreamReader(System.`in`))) {
     val N = readLine().toInt()
 
-    val abilityArr = Array(N) { IntArray(N) }
-        .map {
-            readLine()
-                .replace(" ", "")
-                .map { Character.getNumericValue(it) }
-                .toIntArray()
-        }
-
-    val prevTime = System.currentTimeMillis()
-
-    val indexArr = IntArray(N).mapIndexed { index, _ -> index }.toIntArray()
-
-    val findVisitedFlag = BooleanArray(N)
-    val abilityVisitedFlag = BooleanArray(N)
-
-    val teamStart = IntArray(N / 2)
-    var teamLink = IntArray(N / 2)
-
-    val tempArr = IntArray(N / 2)
-
-    var startAbility = 0
-    var linkAbility = 0
-
-    var minAbility = Int.MAX_VALUE
-
-    fun getStartAbility(depth: Int = 0) {
-        if (depth == 2) {
-            startAbility += abilityArr[tempArr[0]][tempArr[1]]
-            return
-        }
-
-        loop@ for (i in teamStart.indices) {
-            if (abilityVisitedFlag[i]) continue@loop
-            tempArr[depth] = teamStart[i]
-            abilityVisitedFlag[i] = true
-            getStartAbility(depth + 1)
-            abilityVisitedFlag[i] = false
-        }
+    val abilityArr = Array(N) { IntArray(N) }.map {
+        readLine().split(' ').map { it.toInt() }.toIntArray()
     }
 
-    fun getLinkAbility(depth: Int = 0) {
-        if (depth == 2) {
-            linkAbility += abilityArr[tempArr[0]][tempArr[1]]
-        }
+    val visited = BooleanArray(N) { false }
 
-        loop@ for (i in teamLink.indices) {
-            if (abilityVisitedFlag[i]) continue@loop
-            tempArr[depth] = teamLink[i]
-            abilityVisitedFlag[i] = true
-            getLinkAbility(depth + 1)
-            abilityVisitedFlag[i] = false
-        }
-    }
+    var minValue = Int.MAX_VALUE
 
-    fun findMinimum(depth: Int = 0) {
+    fun findMinimum(pivot: Int = 0, depth: Int = 0) {
         if (depth == N / 2) {
-            startAbility = 0
-            linkAbility = 0
-            teamLink = indexArr.subtract(teamStart.asIterable()).toIntArray()
+            var teamStart = 0
+            var teamLink = 0
 
-            getStartAbility()
-            getLinkAbility()
-
-            minAbility = min(minAbility, abs(startAbility - linkAbility))
-
+            for (col in 0 until N - 1) {
+                for (row in col + 1 until N) {
+                    if (visited[col] && visited[row]) {
+                        teamStart += abilityArr[col][row] + abilityArr[row][col]
+                    } else if (visited[col].not() && visited[row].not()) {
+                        teamLink += abilityArr[col][row] + abilityArr[row][col]
+                    }
+                }
+            }
+            minValue = min(minValue, abs(teamStart - teamLink))
             return
         }
 
-        loop@ for (i in 0 until N) {
-            if (findVisitedFlag[i]) continue@loop
-            teamStart[depth] = i
-            findVisitedFlag[i] = true
-            findMinimum(depth + 1)
-            findVisitedFlag[i] = false
+        for (i in pivot until N) {
+            if (visited[i].not()) {
+                visited[i] = true
+                findMinimum(i + 1, depth + 1)
+                visited[i] = false
+            }
         }
     }
 
     findMinimum()
 
-    println(minAbility)
-    println("${(System.currentTimeMillis() - prevTime)} ms")
+    println(minValue)
 }
