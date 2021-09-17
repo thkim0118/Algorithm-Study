@@ -1,4 +1,4 @@
-package thkim.graph.dfs
+package thkim.week01
 
 fun main() {
     val result =`단어 변환`().solution("hit", "cog", arrayOf("hot", "dot", "dog", "lot", "log", "cog"))

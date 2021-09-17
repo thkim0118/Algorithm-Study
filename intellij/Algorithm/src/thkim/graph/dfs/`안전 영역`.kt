@@ -1,4 +1,4 @@
-package thkim.week01
+package thkim.graph.dfs
 
 import java.io.BufferedReader
 import java.io.InputStreamReader
