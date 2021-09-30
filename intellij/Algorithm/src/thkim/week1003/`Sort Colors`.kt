@@ -12,9 +12,9 @@ fun main() {
 
 class `Sort Colors` {
     fun sortColors(nums: IntArray): Unit {
-        var pivot = 0
-        var p1 = 0
-        var p2 = nums.size - 1
+        var pivot = 0 // 변경 대상
+        var p1 = 0 // 값 0의 가장 앞의 인덱스
+        var p2 = nums.size - 1 // 값 2의 앞의 인덱스
 
         while (pivot <= p2) {
             when (nums[pivot]) {
