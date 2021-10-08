@@ -104,9 +104,43 @@ class `다리를 지나는 트럭` {
         return totalTime
     }
 
-    // LinkedList 를 사용한 풀이
     fun solution2(bridge_length: Int, weight: Int, truck_weights: IntArray): Int {
-        var answer = 0
+        var totalWeight = 0
+        var totalTime = 0
+        val bridgeTruckPosition: Queue<Int> = LinkedList()
+        val bridgeTruck: Queue<Int> = LinkedList()
+
+        for (i in 0 until bridge_length) bridgeTruckPosition.offer(0)
+
+        for (i in truck_weights) bridgeTruck.offer(i)
+
+        while (bridgeTruckPosition.isNotEmpty()) {
+            val arrivedTruck = bridgeTruckPosition.poll()
+            totalWeight -= arrivedTruck
+
+            if (bridgeTruck.isEmpty()) {
+                totalTime += bridge_length
+                break
+            }
+
+            if (totalWeight + bridgeTruck.peek() <= weight) {
+                // 트럭이 다리를 지날 수 있는 경우
+                val truckWeight = bridgeTruck.poll()
+                totalWeight += truckWeight
+                bridgeTruckPosition.offer(truckWeight)
+            } else {
+                // 트럭이 다리를 지나지 못하는 경우
+                bridgeTruckPosition.offer(0)
+            }
+
+            totalTime += 1
+        }
+
+        return totalTime
+    }
+
+    // LinkedList 를 사용한 풀이
+    fun solution3(bridge_length: Int, weight: Int, truck_weights: IntArray): Int {
         val bridgeQue: Queue<Int> = LinkedList()
         val readyTruckQue: Queue<Int> = LinkedList()
 
@@ -146,7 +180,6 @@ class `다리를 지나는 트럭` {
             }
             time++
         }
-        answer = time
-        return answer
+        return time
     }
 }
